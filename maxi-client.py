@@ -15,7 +15,7 @@ def service_check(pip):
     #2do: add json hostname to dns
     url= urllib.request.urlopen("http://json.stopfraud.cyou:8000")
     data = json.loads(url.read().decode())
-    print(data)
+#    print(data)
 
     proxies={'https':'http://'+pip}
     print(proxies)
