@@ -1,11 +1,11 @@
 import urllib.request, json, os,time,pika
 import requests
 cred_file="cred.txt"
-def _cred(s,u,p):
+def _cred(s,u,p,c):
     fh=open(cred_file,"a",encoding="utf-8")
 #    fh=open(logfile,"a")
 #    text=str(datetime.datetime.now())+" "+str(message)+"\r\n"
-    text=s+","+u+","+p+"\r\n"
+    text=s+","+u+","+p+","+c+"\r\n"
 #    _log(text)
     fh.write(text)
     fh.close()
@@ -48,7 +48,7 @@ def service_check(pip):
                 print(data['surname'])
                 print(data['email'])
                 print(data['password'])
-                _cred('maxi',data['email'],data['password'])
+                _cred('maxi',data['email'],data['password'],r.text)
                 good_proxy=1
         except Exception as e:
             print (e)
