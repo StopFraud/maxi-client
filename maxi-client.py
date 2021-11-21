@@ -51,6 +51,8 @@ def service_check(pip):
         print (e)
         pass
 
+    url= urllib.request.urlopen("http://json.stopfraud.cyou:8000")
+    data = json.loads(url.read().decode())
 
     d1={'_wpcf7':'5','_wpcf7_version':'5.3.2','_wpcf7_locale':'ru_RU','_wpcf7_unit_tag':'wpcf7-f5-o1','_wpcf7_container_post':'0','your-name':data["name"],'email-730':data["email"],'menu-326':'Россия','tel-163':data["phone_full"],'menu-48':'Открытие счёта','your-message':data["phrase"]}
     print(d1)    
