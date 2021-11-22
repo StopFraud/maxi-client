@@ -1,5 +1,7 @@
 import websocket, requests,random, uuid,json
 import urllib.request
+from urllib.parse import unquote
+import urllib
 import time,sys,datetime
 logfile='webscoket.log'
 def _log(message):
@@ -104,14 +106,21 @@ while True:
             if 'agent_info' in str(a):
                 print("Agent found")
             if '"sender":"agent"' in str(a):
+                j1=json.loads(a)
+                q=j1["args"]["text"]
+                print("parsed q "+str(q))
+                qe=urllib.parse.quote(q)
+                print("encoded q "+qe)
+                url3= urllib.request.urlopen("http://json.stopfraud.cyou:8000/api/ai/"+qe)
+                data3 = json.loads(url3.read().decode())
 
                 msg={"id":"54c0e6ac-2601-4d81-aa61-4a9f539d42f2","cmd":"new_message","args":{"text":"С какой биржей работаете?","language":"ru","additionalInfo":{"url":"https://maximarkets.so/contacts/","pageName":"Контакты Форекс Брокера Максимаркетс, поддержка трейдеров | | MaxiMarkets (МаксиМаркетс)"}}}
 #        msg={"id":"54c0e6ac-2601-4d81-aa61-4a9f539d42f2","cmd":"new_message","args":{"text":"У меня 3 вопроса по поводу регистрации","language":"ru","additionalInfo":{"url":"https://maximarkets.so/contacts/","pageName":"???????? ?????? ??????? ????????????, ????????? ????????? | | MaxiMarkets (????????????)"}}}
                 msg['id']=get_uuid()
-                msg["args"]["text"]=data["phone_full"]
+                msg["args"]["text"]=data3["answer"]
                 ws.send(json.dumps(msg))
-            a=ws.recv()
-            print(a)
+#            a=ws.recv()
+#            print(a)
 
 #    _log(ws2.recv())
 #time.sleep(1)
