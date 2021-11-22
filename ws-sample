@@ -1,0 +1,38 @@
+#Host  wss://ask.globalcloudteam.com/ws-proxy/ws?pingMsg=.&pingWait=120
+Important is 58614a56-7139-4052-9356-c6d333c4152c
+
+S {"id":"2b883514-cbb8-4a4b-a355-9d004a864f7a","cmd":"auth_connection","args":{"userId":"df55384d-d338-4844-8a4b-d569dfbc732d","channelId":"58614a56-7139-4052-9356-c6d333c4152c"}}
+R {"cmd":"auth_connection_response_2b883514-cbb8-4a4b-a355-9d004a864f7a"}
+S {"id":"b83fc67f-b880-4a15-ba76-46961fa54bfe","cmd":"get_client_dialog_messages","args":{"isEarlier":false,"fromMsgID":0,"count":0}}
+R {"cmd":"get_client_dialog_messages_response_b83fc67f-b880-4a15-ba76-46961fa54bfe","args":[]}
+S {"id":"54c0e6ac-2601-4d81-aa61-4a9f539d42f2","cmd":"new_message","args":{"text":"С какой биржей работаете?","language":"ru","additionalInfo":{"url":"https://maximarkets.so/contacts/","pageName":"Контакты Форекс Брокера Максимаркетс, поддержка трейдеров | | MaxiMarkets (МаксиМаркетс)"}}}
+R {"cmd":"new_message_response_54c0e6ac-2601-4d81-aa61-4a9f539d42f2","args":{"id":692183,"text":"С какой биржей работаете?","time":"2021-11-22T04:53:43Z","sender":"client","readStatus":0,"type":0,"quotedMessageId":0,"quotedMessage":null}}
+R {"cmd":"agent_info","args":{"id":"cd4a2765-5993-4e35-bc09-d20f55c46843","name":"Amelia","avatar":"https://ask.globalcloudteam.com/file-storage/files/7a47ebd8-08e0-4b28-8834-8308a77e177e.png","brandsNamesLocales":[]}}
+R {"cmd":"agent_typing","args":{"typerId":"cd4a2765-5993-4e35-bc09-d20f55c46843","channelId":"58614a56-7139-4052-9356-c6d333c4152c","clientId":"df55384d-d338-4844-8a4b-d569dfbc732d"}}
+R {"cmd":"agent_typing","args":{"typerId":"cd4a2765-5993-4e35-bc09-d20f55c46843","channelId":"58614a56-7139-4052-9356-c6d333c4152c","clientId":"df55384d-d338-4844-8a4b-d569dfbc732d"}}
+R {"cmd":"agent_typing","args":{"typerId":"cd4a2765-5993-4e35-bc09-d20f55c46843","channelId":"58614a56-7139-4052-9356-c6d333c4152c","clientId":"df55384d-d338-4844-8a4b-d569dfbc732d"}}
+R {"cmd":"agent_typing","args":{"typerId":"cd4a2765-5993-4e35-bc09-d20f55c46843","channelId":"58614a56-7139-4052-9356-c6d333c4152c","clientId":"df55384d-d338-4844-8a4b-d569dfbc732d"}}
+R {"cmd":"new_message","args":{"id":692188,"text":"Здравствуйте. Вы обратились в онлайн чат компании Maxi Markets. Чем могу помочь ?","type":1,"clientId":"df55384d-d338-4844-8a4b-d569dfbc732d","sender":"agent","channelId":"58614a56-7139-4052-9356-c6d333c4152c"}}
+R {"cmd":"changed_online_status","args":{"onlineStatus":2}}
+S {"id":"3cc9f515-d5cc-4f2b-b7eb-02555917b595","cmd":"new_message","args":{"text":"вы иностранный брокер или отечественный?","language":"ru","additionalInfo":{"url":"https://maximarkets.so/contacts/","pageName":"Контакты Форекс Брокера Максимаркетс, поддержка трейдеров | | MaxiMarkets (МаксиМаркетс)"}}}
+R {"cmd":"new_message_response_3cc9f515-d5cc-4f2b-b7eb-02555917b595","args":{"id":692192,"text":"вы иностранный брокер или отечественный?","time":"2021-11-22T04:55:49Z","sender":"client","readStatus":0,"type":0,"quotedMessageId":0,"quotedMessage":null}}
+R {"cmd":"agent_typing","args":{"typerId":"cd4a2765-5993-4e35-bc09-d20f55c46843","channelId":"58614a56-7139-4052-9356-c6d333c4152c","clientId":"df55384d-d338-4844-8a4b-d569dfbc732d"}}
+R {"cmd":"agent_typing","args":{"typerId":"cd4a2765-5993-4e35-bc09-d20f55c46843","channelId":"58614a56-7139-4052-9356-c6d333c4152c","clientId":"df55384d-d338-4844-8a4b-d569dfbc732d"}}
+R {"cmd":"new_message","args":{"id":692195,"text":"Вы проходили регистрацию у нас на сайте ?","type":1,"clientId":"df55384d-d338-4844-8a4b-d569dfbc732d","sender":"agent","channelId":"58614a56-7139-4052-9356-c6d333c4152c"}}
+
+
+output example
+{'id': 'ec52b74b-357f-415a-8625-dbc11026200c', 'cmd': 'auth_connection', 'args': {'userId': '1a9dce48-d27d-43c7-a97f-45b961a9a09c', 'channelId': '58614a56-7139-4052-9356-c6d333c4152c'}}
+2021-11-22 06:15:18.283831 {"cmd":"auth_connection_response_ec52b74b-357f-415a-8625-dbc11026200c"}
+{'id': '40113185-820a-4168-9911-62e6a3b727b5', 'cmd': 'get_client_dialog_messages', 'args': {'isEarlier': False, 'fromMsgID': 0, 'count': 0}}
+2021-11-22 06:15:19.311601 {"cmd":"get_client_dialog_messages_response_40113185-820a-4168-9911-62e6a3b727b5","args":[]}
+2021-11-22 06:15:20.126295 {"cmd":"new_message_response_cd4cc688-7fa1-4d18-975c-1558eec7ac01","args":{"id":692415,"text":"С какой биржей работаете?","time":"2021-11-22T06:15:19Z","sender":"client","readStatus":0,"type":0,"quotedMessageId":0,"quot
+edMessage":null}}
+2021-11-22 06:16:55.054553 {"cmd":"agent_info","args":{"id":"cd4a2765-5993-4e35-bc09-d20f55c46843","name":"Amelia","avatar":"https://ask.globalcloudteam.com/file-storage/files/7a47ebd8-08e0-4b28-8834-8308a77e177e.png","brandsNamesLocales":[]}}
+2021-11-22 06:17:16.057158 {"cmd":"agent_typing","args":{"typerId":"cd4a2765-5993-4e35-bc09-d20f55c46843","channelId":"58614a56-7139-4052-9356-c6d333c4152c","clientId":"1a9dce48-d27d-43c7-a97f-45b961a9a09c"}}
+2021-11-22 06:17:19.519251 {"cmd":"agent_typing","args":{"typerId":"cd4a2765-5993-4e35-bc09-d20f55c46843","channelId":"58614a56-7139-4052-9356-c6d333c4152c","clientId":"1a9dce48-d27d-43c7-a97f-45b961a9a09c"}}
+2021-11-22 06:17:29.537312 {"cmd":"agent_typing","args":{"typerId":"cd4a2765-5993-4e35-bc09-d20f55c46843","channelId":"58614a56-7139-4052-9356-c6d333c4152c","clientId":"1a9dce48-d27d-43c7-a97f-45b961a9a09c"}}
+2021-11-22 06:17:39.535167 {"cmd":"agent_typing","args":{"typerId":"cd4a2765-5993-4e35-bc09-d20f55c46843","channelId":"58614a56-7139-4052-9356-c6d333c4152c","clientId":"1a9dce48-d27d-43c7-a97f-45b961a9a09c"}}
+2021-11-22 06:17:49.591267 {"cmd":"agent_typing","args":{"typerId":"cd4a2765-5993-4e35-bc09-d20f55c46843","channelId":"58614a56-7139-4052-9356-c6d333c4152c","clientId":"1a9dce48-d27d-43c7-a97f-45b961a9a09c"}}
+2021-11-22 06:17:52.152646 {"cmd":"new_message","args":{"id":692423,"text":"Здравствуйте. Уточните, пожалуйста, номер телефона для связи с Вами, специалист нашей компании с вами свяжется и проконсультирует Вас .","type":1,"clientId":"1a9dce48-d27
+d-43c7-a97f-45b961a9a09c","sender":"agent","channelId":"58614a56-7139-4052-9356-c6d333c4152c"}}
