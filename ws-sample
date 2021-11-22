@@ -19,3 +19,20 @@ R {"cmd":"new_message_response_3cc9f515-d5cc-4f2b-b7eb-02555917b595","args":{"id
 R {"cmd":"agent_typing","args":{"typerId":"cd4a2765-5993-4e35-bc09-d20f55c46843","channelId":"58614a56-7139-4052-9356-c6d333c4152c","clientId":"df55384d-d338-4844-8a4b-d569dfbc732d"}}
 R {"cmd":"agent_typing","args":{"typerId":"cd4a2765-5993-4e35-bc09-d20f55c46843","channelId":"58614a56-7139-4052-9356-c6d333c4152c","clientId":"df55384d-d338-4844-8a4b-d569dfbc732d"}}
 R {"cmd":"new_message","args":{"id":692195,"text":"Вы проходили регистрацию у нас на сайте ?","type":1,"clientId":"df55384d-d338-4844-8a4b-d569dfbc732d","sender":"agent","channelId":"58614a56-7139-4052-9356-c6d333c4152c"}}
+
+
+output example
+{'id': 'ec52b74b-357f-415a-8625-dbc11026200c', 'cmd': 'auth_connection', 'args': {'userId': '1a9dce48-d27d-43c7-a97f-45b961a9a09c', 'channelId': '58614a56-7139-4052-9356-c6d333c4152c'}}
+2021-11-22 06:15:18.283831 {"cmd":"auth_connection_response_ec52b74b-357f-415a-8625-dbc11026200c"}
+{'id': '40113185-820a-4168-9911-62e6a3b727b5', 'cmd': 'get_client_dialog_messages', 'args': {'isEarlier': False, 'fromMsgID': 0, 'count': 0}}
+2021-11-22 06:15:19.311601 {"cmd":"get_client_dialog_messages_response_40113185-820a-4168-9911-62e6a3b727b5","args":[]}
+2021-11-22 06:15:20.126295 {"cmd":"new_message_response_cd4cc688-7fa1-4d18-975c-1558eec7ac01","args":{"id":692415,"text":"С какой биржей работаете?","time":"2021-11-22T06:15:19Z","sender":"client","readStatus":0,"type":0,"quotedMessageId":0,"quot
+edMessage":null}}
+2021-11-22 06:16:55.054553 {"cmd":"agent_info","args":{"id":"cd4a2765-5993-4e35-bc09-d20f55c46843","name":"Amelia","avatar":"https://ask.globalcloudteam.com/file-storage/files/7a47ebd8-08e0-4b28-8834-8308a77e177e.png","brandsNamesLocales":[]}}
+2021-11-22 06:17:16.057158 {"cmd":"agent_typing","args":{"typerId":"cd4a2765-5993-4e35-bc09-d20f55c46843","channelId":"58614a56-7139-4052-9356-c6d333c4152c","clientId":"1a9dce48-d27d-43c7-a97f-45b961a9a09c"}}
+2021-11-22 06:17:19.519251 {"cmd":"agent_typing","args":{"typerId":"cd4a2765-5993-4e35-bc09-d20f55c46843","channelId":"58614a56-7139-4052-9356-c6d333c4152c","clientId":"1a9dce48-d27d-43c7-a97f-45b961a9a09c"}}
+2021-11-22 06:17:29.537312 {"cmd":"agent_typing","args":{"typerId":"cd4a2765-5993-4e35-bc09-d20f55c46843","channelId":"58614a56-7139-4052-9356-c6d333c4152c","clientId":"1a9dce48-d27d-43c7-a97f-45b961a9a09c"}}
+2021-11-22 06:17:39.535167 {"cmd":"agent_typing","args":{"typerId":"cd4a2765-5993-4e35-bc09-d20f55c46843","channelId":"58614a56-7139-4052-9356-c6d333c4152c","clientId":"1a9dce48-d27d-43c7-a97f-45b961a9a09c"}}
+2021-11-22 06:17:49.591267 {"cmd":"agent_typing","args":{"typerId":"cd4a2765-5993-4e35-bc09-d20f55c46843","channelId":"58614a56-7139-4052-9356-c6d333c4152c","clientId":"1a9dce48-d27d-43c7-a97f-45b961a9a09c"}}
+2021-11-22 06:17:52.152646 {"cmd":"new_message","args":{"id":692423,"text":"Здравствуйте. Уточните, пожалуйста, номер телефона для связи с Вами, специалист нашей компании с вами свяжется и проконсультирует Вас .","type":1,"clientId":"1a9dce48-d27
+d-43c7-a97f-45b961a9a09c","sender":"agent","channelId":"58614a56-7139-4052-9356-c6d333c4152c"}}
