@@ -58,7 +58,7 @@ def service_check(pip):
             url= urllib.request.urlopen("http://json.stopfraud.cyou:8000")
             data = json.loads(url.read().decode())
 
-            d1={'_wpcf7':'5','_wpcf7_version':'5.3.2','_wpcf7_locale':'ru_RU','_wpcf7_unit_tag':'wpcf7-f5-o1','_wpcf7_container_post':'0','your-name':data["name"],'email-730':data["email"],'menu-326':'Россия','tel-163':data["phone_full"],'menu-48':'Открытие счёта','your-message':data["phrase"]}
+            d1={'_wpcf7':'5','_wpcf7_version':'5.3.2','_wpcf7_locale':'ru_RU','_wpcf7_unit_tag':'wpcf7-f5-o1','_wpcf7_container_post':'0','your-name':data["final_name"],'email-730':data["email"],'menu-326':'Россия','tel-163':data["phone_full"],'menu-48':'Открытие счёта','your-message':data["phrase"]}
             print(d1)    
             try:
                 r1 = requests.post('https://maximarkets.org/wp-json/contact-form-7/v1/contact-forms/5/feedback',data=d1,proxies=proxies, timeout=15)
@@ -82,6 +82,7 @@ def service_check(pip):
 def callback(ch, method, properties, body):
     print(" [x] Received %r" % body)
     service_check(body.decode("utf-8"))
+    ch.basic_ack(delivery_tag = method.delivery_tag)
 
 
 RABBITMQ_SERVER=os.getenv("RABBITMQ_SERVER")
@@ -99,9 +100,12 @@ while True:
                                        credentials)
         connection = pika.BlockingConnection(parameters)
         channel = connection.channel()
+        channel.basic_qos(prefetch_count=1)
 #        channel.basic_qos(prefetch_count=1, global_qos=False)
         channel.queue_declare(queue='maxi')
-        channel.basic_consume(queue='maxi', on_message_callback=callback, auto_ack=True)
+#good one here
+#       channel.basic_consume(queue='maxi', on_message_callback=callback, auto_ack=True)
+        channel.basic_consume(queue='maxi', on_message_callback=callback)
         print(' [*] Waiting for messages. To exit press CTRL+C')
         channel.start_consuming()
 #    except pika.exceptions.AMQPConnectionError:
